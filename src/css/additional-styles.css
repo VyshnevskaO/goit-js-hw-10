@@ -73,8 +73,17 @@ body{
         
       font-size: 16px;
       letter-spacing: 0.04em;
-          color: #2e2f42;
+      color: #2e2f42;
+      background-color: #fff;;
 }
+
+.input-data:disabled {
+  background-color: #fafafa;;
+  color: #808080;
+  
+ 
+
+} 
 
 .timer-btn{
   width: 75px;
