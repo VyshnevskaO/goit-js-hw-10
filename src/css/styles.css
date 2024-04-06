@@ -6,18 +6,19 @@
 */
 @import url('./reset.css');
 @import url('./vite-promo.css');
-@import url('./additional-styles.css');
+@import url('./additional-styles-timer.css');
+@import url('./additional-styles-snackbar.css');
 
 
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, Avenir, Helvetica, Arial, Montserrat, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  /* color: #242424;
+  background-color: rgba(255, 255, 255, 0.87); */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -5,13 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snackbar</title>
-    <link rel="stylesheet" href="./css/additional-styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
   </head>
   <body>
-    <section>
-      <a href="./index.html">Go to home</a>
-      <h1>Welcome to page 3</h1>
-    </section>
-    <script type="module" src="./2-snackbar.html"></script>
+    <a href="./index.html">Go to home</a>
+    <h1>Snackbar</h1>
+
+    <form class="form">
+      <label class="delay">
+        Delay (ms)
+        <input class="input-delay" type="number" name="delay" required />
+      </label>
+
+      <fieldset class="input-select">
+        <legend class="state">State</legend>
+        <p class="select-state">
+          <label>
+            <input type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label>
+            <input type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </p>
+      </fieldset>
+
+      <button class="snackbar-sbmt-btn" type="submit">
+        Create notification
+      </button>
+    </form>
+
+    <script type="module" src="./js/2-snackbar.js"></script>
   </body>
 </html>
