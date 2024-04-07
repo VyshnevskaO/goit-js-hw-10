@@ -14,25 +14,24 @@ function onBtnSubmit(event) {
     const stateStatus = event.currentTarget.elements.state.value;
 
     const promise = new Promise((resolve, reject) => {
-       
+        setTimeout(() => { 
         if (stateStatus === "fulfilled") {
-            resolve(`✅ Fulfilled promise in ${ms} ms`);
+            resolve(ms);
         } else {
-            reject(`❌ Rejected promise in ${ms} ms`);
+            reject(ms);
         }
+    }, ms)
     })
 
    
     promise
-        .then(data => {
-            setTimeout(() => {
-                iziToast.show({ message: `${data}`, backgroundColor: '#59a10d', messageColor: '#fff' });
-            }, ms)
-        })
-        .catch(data => {
-            setTimeout(() => {
-                iziToast.show({ message: `${data}`, backgroundColor: ' #ef4040', messageColor: '#fff' });
-            }, ms)
-        });
+        .then(ms => {
+                iziToast.show({ message: `✅ Fulfilled promise in ${ms} ms`, backgroundColor: '#59a10d', messageColor: '#fff' });
+            }
+        )
+        .catch(ms => {
+                iziToast.show({ message: `❌ Rejected promise in ${ms} ms`, backgroundColor: ' #ef4040', messageColor: '#fff' });
+            }
+        );
 
 }
